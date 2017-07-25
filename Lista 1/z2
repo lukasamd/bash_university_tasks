@@ -1,0 +1,9 @@
+#!/bin/sh
+
+katalog=''
+
+for i in {1..5}
+do
+	katalog=${katalog}$1'/'
+	mkdir $katalog
+done

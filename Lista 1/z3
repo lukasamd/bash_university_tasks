@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if test "$1" == ''
+then
+	echo "Nie podano argumentu"
+	exit 1
+fi
+if [ ! -d "$1" ]
+then
+	echo "Plik a nie katalog"
+	exit 1
+fi
+
+
+for zm in `ls $1`
+do
+	mv ${1}'/'${zm} ${1}'/'x${zm}
+done

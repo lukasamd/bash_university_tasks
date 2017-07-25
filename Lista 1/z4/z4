@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if test "$1" == '' -a "$2" == ''
+then
+	echo "Nie podano argumentu"
+	exit 1
+fi
+
+if test ! -f "$1" -o ! -d "$2"
+then
+	echo "Nieprawidlowe argumenty"
+	exit 1
+fi
+
+
+for zm in `cat $1`
+do
+	touch ${2}'/'${zm}
+done
